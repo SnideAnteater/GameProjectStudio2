@@ -21,7 +21,9 @@ public class Hook : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            GameManager.Instance.activeHook = this.gameObject;
             collision.gameObject.SendMessage("Hooked");
+            
         }
     }
 }

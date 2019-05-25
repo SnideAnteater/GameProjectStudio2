@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    Vector3 lastPos;
+   // Vector3 lastPos;
     bool hooked = false;
     bool unhook = false;
     // Start is called before the first frame update
@@ -20,25 +20,27 @@ public class PlayerScript : MonoBehaviour
         
         if(unhook)
         {
-            if (transform.position != lastPos)
-            {
-                unhook = false;
-            }
+           
         }
-       
-        if (hooked && unhook==false)
-            transform.position = lastPos;
+       else if (hooked && unhook==false)
+            transform.position = GameManager.Instance.activeHook.transform.position;
     }
 
     void Hooked()
     {
+        if(unhook==false)
         hooked = true;
-        lastPos = transform.position;
+       // lastPos = transform.position;
     }
 
     void Interact()
     {
         hooked = false;
         unhook = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        unhook = false;
     }
 }

@@ -21,7 +21,8 @@ public class Interact : MonoBehaviour
             if (Physics.Raycast(raycast, out raycastHit))
             {
                 print("hit something ");
-                raycastHit.collider.gameObject.SendMessage("Interact");
+                if (raycastHit.transform.gameObject.CompareTag("Player"))
+                    raycastHit.collider.gameObject.SendMessage("Interact");
             }
 
         }

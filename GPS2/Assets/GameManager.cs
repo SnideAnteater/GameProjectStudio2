@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject player;
+    public GameObject activeHook;
 
     public static GameManager Instance { get; private set; }
 
