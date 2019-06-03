@@ -20,9 +20,9 @@ public class Rotation : MonoBehaviour
             Touch touch = Input.GetTouch(0);
 
             if (touch.position.x > Screen.width / 2)
-            this.transform.Rotate(0, 0, touch.deltaPosition.y*sensitivity);
+            this.transform.Rotate(0, 0, touch.deltaPosition.y*Time.deltaTime*sensitivity);
             else
-            this.transform.Rotate(0, 0, -(touch.deltaPosition.y*sensitivity));
+            this.transform.Rotate(0, 0, -(touch.deltaPosition.y*Time.deltaTime*sensitivity));
 
         }
 
