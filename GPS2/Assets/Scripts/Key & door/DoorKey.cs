@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hook : MonoBehaviour
+public class DoorKey : MonoBehaviour
 {
-    public MeshCollider hook;
+     MeshCollider key;
+    public Door door;
     // Start is called before the first frame update
     void Start()
     {
-        hook = this.GetComponent("MeshCollider") as MeshCollider;
+        key = this.GetComponent("MeshCollider") as MeshCollider;
+
     }
 
     // Update is called once per frame
@@ -19,11 +21,11 @@ public class Hook : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
+            Destroy(this.gameObject);
+            door.gameObject.SendMessage("Unlock");
 
-            collision.gameObject.SendMessage("Hooked");
-            
         }
     }
 }
