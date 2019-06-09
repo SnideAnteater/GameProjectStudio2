@@ -20,11 +20,18 @@ public class PlayerScript : MonoBehaviour
        
     }
 
-
-    void Interact()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            Destroy(this.gameObject);
+            //SceneManager.LoadScene("LosingScene");
+        }
+        else if (collision.gameObject.tag.Equals("Exit"))
+        {
+            //SceneManager.LoadScene("WinningScene");
+        }
     }
 
-    
+
 }

@@ -23,10 +23,7 @@ public class Rotation : MonoBehaviour
             this.transform.Rotate(0, 0, touch.deltaPosition.y*Time.deltaTime*sensitivity);
             else
             this.transform.Rotate(0, 0, -(touch.deltaPosition.y*Time.deltaTime*sensitivity));
-
         }
-
-
     }
 
 }
