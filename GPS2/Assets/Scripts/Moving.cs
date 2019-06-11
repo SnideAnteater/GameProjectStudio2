@@ -5,8 +5,10 @@ using UnityEngine;
 public class Moving : MonoBehaviour
 {
     private Vector3 MovingDirection;
-    public bool upDown = false;
-    public bool leftRight = false;
+    public enum dir { vertical=0, horizontal};
+    public dir direction = dir.vertical;
+    //public bool upDown = false;
+    //public bool leftRight = false;
     public int maxSpeed;
     private Vector3 startPosition;
     public float DistanceY;
@@ -23,12 +25,19 @@ public class Moving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveVertical();
+        Move();
     }
 
-    void MoveVertical()
+    void Move()
     {
-            
+        if(direction == dir.vertical)
+        {
+            this.transform.Translate(0, 1, 0);
+        }
+        else if(direction == dir.horizontal)
+        {
+            this.transform.Translate(1, 0, 0);
+        }
 
      
     }
