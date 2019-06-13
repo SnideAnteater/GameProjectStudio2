@@ -11,7 +11,7 @@ public class Rotation : MonoBehaviour
     void Start()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
-        rb = GetComponentsInChildren<Rigidbody>;
+        //rb = GetComponentsInChildren<Rigidbody>;
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class Rotation : MonoBehaviour
             this.transform.Rotate(0, 0, touch.deltaPosition.y*Time.deltaTime*sensitivity);//TRY ADD TORQUE OR ADD FORCE
             else
             this.transform.Rotate(0, 0, -(touch.deltaPosition.y*Time.deltaTime*sensitivity));
-            Rigidbody.AddTorque(0, 0, -(touch.deltaPosition.y * Time.deltaTime * sensitivity));
+            //Rigidbody.AddTorque(0, 0, -(touch.deltaPosition.y * Time.deltaTime * sensitivity));
         }
     }
 
