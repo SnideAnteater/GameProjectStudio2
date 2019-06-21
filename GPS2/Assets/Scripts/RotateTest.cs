@@ -6,11 +6,11 @@ public class RotateTest : MonoBehaviour
 {
     public KeyCode pressUp;
     public KeyCode pressDown;
-    int rotationDir;
+    float rotationDir;
 
     void Start()
     {
-        rotationDir = 0;
+        rotationDir = this.transform.eulerAngles.z;
     }
 
     void Update()
