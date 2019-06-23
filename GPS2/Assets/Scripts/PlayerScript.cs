@@ -11,9 +11,9 @@ public class PlayerScript : MonoBehaviour
     public Transform Chase1;
     public Transform Chase2;
 
-    private bool IsCP1Checked;
-    private bool IsCP2Checked;
-    private bool IsCP3Checked;
+    public bool IsCP1Checked;
+    public bool IsCP2Checked;
+    public bool IsCP3Checked;
 
 
     void Start()
@@ -24,15 +24,9 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Hazard")
+        /*if (collision.gameObject.tag == "Hazard")
         {
             //Debug.Log("Dead");
             //Destroy(this.gameObject);
@@ -54,14 +48,14 @@ public class PlayerScript : MonoBehaviour
             {
                 SceneManager.LoadScene("POC");
             }
-        }
-        else if (collision.gameObject.tag == "Exit")
+        }*/
+        /*else*/ if (collision.gameObject.tag == "Exit")
         {
             SceneManager.LoadScene("POC");
         }
     }
 
-    private void OnTriggerExit(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Checkpoint1")
         {
