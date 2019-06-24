@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
-    public float sensitivity = 13f;
-    public Rigidbody rb;
+    public float sensitivity = 8f;
+   // public Rigidbody rb;
     float curRotation;
-    Vector3 eulerAngleVelocity;
+   // Vector3 eulerAngleVelocity;
     public float threshold = 0.5f;
-    public float maxSpeed = 10f;
-    public float minSpeed = 2f;
+    public float maxSpeed = 15f;
+    public float minSpeed = 5f;
 
 
     // Start is called before the first frame update
     void Start()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
-        rb = GetComponent<Rigidbody>();
+       // rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
