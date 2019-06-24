@@ -4016,8 +4016,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3404723, y: 0, z: 0.27155077}
-  m_Center: {x: 0.29626235, y: 0.22347474, z: 0.115114495}
+  m_Size: {x: 0.3404723, y: 0.029935699, z: 0.27155077}
+  m_Center: {x: 0.29626235, y: 0.20850672, z: 0.11511449}
 --- !u!65 &635408079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4029,8 +4029,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5914992, y: 0, z: 0.27155077}
-  m_Center: {x: 0.17074962, y: -0.2224961, z: 0.115114495}
+  m_Size: {x: 0.34287736, y: 0.032202274, z: 0.27155077}
+  m_Center: {x: 0.29506052, y: -0.20981601, z: 0.1151145}
 --- !u!65 &635408080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7105,8 +7105,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.005995, y: 7.8284397, z: 1.6473078}
-  m_Center: {x: 7.1095223, y: 1.031463, z: 0.6832935}
+  m_Size: {x: 6.0059958, y: 1.5702634, z: 1.6473078}
+  m_Center: {x: 7.109522, y: 0.8758083, z: 0.6832935}
 --- !u!65 &995559961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7118,8 +7118,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.1596637, y: 7.8284397, z: 1.6473078}
-  m_Center: {x: -10.01814, y: 1.0314654, z: 0.6832935}
+  m_Size: {x: 6.1596637, y: 1.6762228, z: 1.6473078}
+  m_Center: {x: -10.01814, y: 0.9725294, z: 0.6832935}
 --- !u!1 &996939113
 GameObject:
   m_ObjectHideFlags: 0
@@ -7588,17 +7588,17 @@ PrefabInstance:
     - target: {fileID: 7834183472274906845, guid: 44d858f1bc66d0b4a9ba24d0b269e514,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2256
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7834183472274906845, guid: 44d858f1bc66d0b4a9ba24d0b269e514,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2256
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7834183472274906845, guid: 44d858f1bc66d0b4a9ba24d0b269e514,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2256
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7834183472274906847, guid: 44d858f1bc66d0b4a9ba24d0b269e514,
         type: 3}
@@ -7609,6 +7609,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834183472274906843, guid: 44d858f1bc66d0b4a9ba24d0b269e514,
+        type: 3}
+      propertyPath: m_Mass
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7834183472274906840, guid: 44d858f1bc66d0b4a9ba24d0b269e514,
         type: 3}
@@ -8646,7 +8651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1199021289
 Transform:
   m_ObjectHideFlags: 0
@@ -10253,7 +10258,7 @@ GameObject:
   - component: {fileID: 1454364324}
   m_Layer: 0
   m_Name: CP1
-  m_TagString: Untagged
+  m_TagString: Checkpoint1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11074,7 +11079,7 @@ GameObject:
   - component: {fileID: 1536438980}
   m_Layer: 0
   m_Name: CP2
-  m_TagString: Untagged
+  m_TagString: Checkpoint2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11086,13 +11091,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536438978}
-  m_LocalRotation: {x: 0.008089524, y: 0.007593154, z: 0.7137823, w: -0.70027983}
-  m_LocalPosition: {x: 9.667, y: -0.126, z: -1.827}
-  m_LocalScale: {x: 0.1, y: 0.3061195, z: 0.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 9.668, y: -0.069, z: -1.7662}
+  m_LocalScale: {x: 0.01, y: 0.34417, z: 0.7352}
   m_Children: []
   m_Father: {fileID: 144063681}
   m_RootOrder: 120
-  m_LocalEulerAnglesHint: {x: -1.2700001, y: 0.052, z: 268.905}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!65 &1536438980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12285,7 +12290,7 @@ GameObject:
   - component: {fileID: 1711248992}
   m_Layer: 0
   m_Name: CP3
-  m_TagString: Untagged
+  m_TagString: Checkpoint3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

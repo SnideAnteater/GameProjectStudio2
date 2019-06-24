@@ -11,9 +11,9 @@ public class PlayerScript : MonoBehaviour
     public Transform Chase1;
     public Transform Chase2;
 
-    public bool IsCP1Checked;
-    public bool IsCP2Checked;
-    public bool IsCP3Checked;
+    private bool IsCP1Checked;
+    private bool IsCP2Checked;
+    private bool IsCP3Checked;
 
 
     void Start()
@@ -55,7 +55,7 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerExit(Collider collider)
     {
         if (collider.gameObject.tag == "Checkpoint1")
         {
