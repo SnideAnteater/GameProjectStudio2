@@ -799,13 +799,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502297869}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5701bd0cdac61414b8bcc38bb324b851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1280852379}
-  sensitivity: 100
+  sensitivity: 15
+  threshold: 0.5
+  maxSpeed: 15
+  minSpeed: 2
 --- !u!4 &502297871
 Transform:
   m_ObjectHideFlags: 0
@@ -833,10 +836,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d5fc73e312eb04295e71c62f6f2ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 100
-  rb: {fileID: 0}
-  threshold: 0.1
-  maxSpeed: 2
+  sensitivity: 13
+  threshold: 0.5
+  maxSpeed: 10
   minSpeed: 2
 --- !u!54 &502297873
 Rigidbody:
@@ -1270,7 +1272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 0.5
-  rb: {fileID: 0}
   threshold: 0.1
   maxSpeed: 2
   minSpeed: 2
@@ -1396,13 +1397,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805293679}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56d5fc73e312eb04295e71c62f6f2ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 8
-  rb: {fileID: 0}
   threshold: 0.5
   maxSpeed: 15
   minSpeed: 5
