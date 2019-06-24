@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
-    public float sensitivity = 0.5f;
+    public float sensitivity = 50f;
     public Rigidbody rb;
     float curRotation;
     Vector3 eulerAngleVelocity;
-    bool jiggle;
 
 
     // Start is called before the first frame update

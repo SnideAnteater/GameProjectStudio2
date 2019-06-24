@@ -765,6 +765,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271b6bc457d28d2499ba58fca9ba8411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cP1: {fileID: 0}
+  cP2: {fileID: 0}
+  cP3: {fileID: 0}
+  Chase1: {fileID: 0}
+  Chase2: {fileID: 0}
+  IsCP1Checked: 0
+  IsCP2Checked: 0
+  IsCP3Checked: 0
 --- !u!1 &540443158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,7 +1317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d5fc73e312eb04295e71c62f6f2ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 3
+  sensitivity: 100
   rb: {fileID: 0}
 --- !u!4 &805293681
 Transform:
@@ -1665,6 +1673,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271b6bc457d28d2499ba58fca9ba8411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cP1: {fileID: 0}
+  cP2: {fileID: 0}
+  cP3: {fileID: 0}
+  Chase1: {fileID: 0}
+  Chase2: {fileID: 0}
+  IsCP1Checked: 0
+  IsCP2Checked: 0
+  IsCP3Checked: 0
 --- !u!135 &1280852381
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2375,28 +2391,6 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481981165}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 3
---- !u!1 &1536506499 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7566510830979260551, guid: 5d1b19694b591d5418060dee4f78fe20,
-    type: 3}
-  m_PrefabInstance: {fileID: 8161202077904964749}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1536506501
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536506499}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
