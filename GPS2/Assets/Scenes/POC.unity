@@ -1266,13 +1266,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144063677}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01c0f9b37d91e5940863722ab691bce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pressUp: 119
   pressDown: 115
+--- !u!114 &144063679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144063677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5701bd0cdac61414b8bcc38bb324b851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 2078637112}
+  sensitivity: 15
+  threshold: 0.5
+  maxSpeed: 15
+  minSpeed: 2
 --- !u!114 &144063680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,8 +1302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d5fc73e312eb04295e71c62f6f2ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 100
-  rb: {fileID: 0}
+  sensitivity: 8
+  threshold: 0.5
+  maxSpeed: 15
+  minSpeed: 5
 --- !u!4 &144063681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: add47db1d8fea9e4ba09dd48be405fdb,
@@ -7610,6 +7629,21 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 72
       objectReference: {fileID: 0}
+    - target: {fileID: 7834183472274906843, guid: 44d858f1bc66d0b4a9ba24d0b269e514,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834183472274906843, guid: 44d858f1bc66d0b4a9ba24d0b269e514,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834183472274906843, guid: 44d858f1bc66d0b4a9ba24d0b269e514,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7834183472274906840, guid: 44d858f1bc66d0b4a9ba24d0b269e514,
         type: 3}
       propertyPath: Chase1
@@ -8225,6 +8259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 2078637112}
+  speed: 10
+  threshold: 0.05
 --- !u!1 &1149892063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6599895599153422364, guid: add47db1d8fea9e4ba09dd48be405fdb,
