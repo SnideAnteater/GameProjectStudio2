@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7834183472274906843}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,9 +28,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7834183472274906817}
-  m_LocalRotation: {x: 0.0086951945, y: 0.000000022592813, z: -0.0007534244, w: 0.9999619}
+  m_LocalRotation: {x: 0.008691641, y: -0.0000022774034, z: -0.00075040717, w: 0.999962}
   m_LocalPosition: {x: 15.8, y: 15.1, z: 32}
-  m_LocalScale: {x: 2.256, y: 2.256, z: 2.256}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fcaac2d1a5faf53459112e152ebf71fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -104,7 +104,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7834183472274906817}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 2e9c5a0b98c81bc47b136ec2c114cf37, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -118,11 +118,11 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7834183472274906817}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 100
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 72
+  m_CollisionDetection: 1
