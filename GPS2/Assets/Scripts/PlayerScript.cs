@@ -26,7 +26,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        /*if (collision.gameObject.tag == "Hazard")
+        if (collision.gameObject.tag == "Hazard")
         {
             //Debug.Log("Dead");
             //Destroy(this.gameObject);
@@ -48,8 +48,8 @@ public class PlayerScript : MonoBehaviour
             {
                 SceneManager.LoadScene("POC");
             }
-        }*/
-        /*else*/ if (collision.gameObject.tag == "Exit")
+        }
+        else if (collision.gameObject.tag == "Exit")
         {
             SceneManager.LoadScene("POC");
         }
