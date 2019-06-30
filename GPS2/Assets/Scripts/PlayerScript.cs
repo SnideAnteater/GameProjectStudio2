@@ -30,11 +30,11 @@ public class PlayerScript : MonoBehaviour
         {
             //Debug.Log("Dead");
             //Destroy(this.gameObject);
-            if(IsCP1Checked)
+            if (IsCP1Checked)
             {
                 this.gameObject.transform.position = cP1.transform.position;
             }
-            else if(IsCP1Checked && IsCP2Checked)
+            else if (IsCP1Checked && IsCP2Checked)
             {
                 Chase1.gameObject.SetActive(false);
                 this.gameObject.transform.position = cP2.transform.position;
@@ -49,6 +49,7 @@ public class PlayerScript : MonoBehaviour
                 SceneManager.LoadScene("POC");
             }
         }
+
         else if (collision.gameObject.tag == "Exit")
         {
             SceneManager.LoadScene("POC");
