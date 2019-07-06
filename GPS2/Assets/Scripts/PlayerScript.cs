@@ -23,33 +23,19 @@ public class PlayerScript : MonoBehaviour
         IsCP3Checked = false;
 
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Hazard")
+        {
+            Dead();
+        }
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Hazard")
         {
-            //Debug.Log("Dead");
-            //Destroy(this.gameObject);
-            if (IsCP1Checked)
-            {
-                this.gameObject.transform.position = cP1.transform.position;
-            }
-            else if (IsCP1Checked && IsCP2Checked)
-            {
-                Chase1.gameObject.SetActive(false);
-                this.gameObject.transform.position = cP2.transform.position;
-            }
-            else if (IsCP1Checked && IsCP2Checked && IsCP3Checked)
-            {
-                Chase2.gameObject.SetActive(false);
-                this.gameObject.transform.position = cP3.transform.position;
-            }
-            else
-            {
-                SceneManager.LoadScene("POC");
-            }
+            Dead();
         }
-
         else if (collision.gameObject.tag == "Exit")
         {
             SceneManager.LoadScene("POC");
@@ -75,5 +61,30 @@ public class PlayerScript : MonoBehaviour
             Chase2.gameObject.SetActive(true);
             IsCP3Checked = true;
         }
+    }
+
+    private void Dead()
+    {
+            Debug.Log("Dead");
+            //Destroy(this.gameObject);
+            if (IsCP1Checked)
+            {
+                this.gameObject.transform.position = cP1.transform.position;
+            }
+            else if (IsCP1Checked && IsCP2Checked)
+            {
+                Chase1.gameObject.SetActive(false);
+                this.gameObject.transform.position = cP2.transform.position;
+            }
+            else if (IsCP1Checked && IsCP2Checked && IsCP3Checked)
+            {
+                Chase2.gameObject.SetActive(false);
+                this.gameObject.transform.position = cP3.transform.position;
+            }
+            else
+            {
+                SceneManager.LoadScene("POC");
+            }
+        
     }
 }
