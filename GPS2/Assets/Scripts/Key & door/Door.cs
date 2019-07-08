@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    
+    bool hasKey = false;
 
     void Unlock()
     {
-        Destroy(this.gameObject);
+        hasKey = true;
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(hasKey)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

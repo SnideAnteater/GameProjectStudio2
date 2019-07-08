@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class DoorKey : MonoBehaviour
 {
-     MeshCollider key;
+    public float speed = 10;
     public Door door;
     // Start is called before the first frame update
     void Start()
     {
-        key = this.GetComponent("MeshCollider") as MeshCollider;
+       
 
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        this.transform.Rotate(0, 1*Time.deltaTime*speed, 0);
     }
 
     private void OnCollisionEnter(Collision collision)

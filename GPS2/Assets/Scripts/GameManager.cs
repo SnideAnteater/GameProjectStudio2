@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public GameObject player;
     public float zoom;
+    public float sensitivity;
+   
 
     public static GameManager Instance { get; private set; }
 
@@ -18,6 +20,8 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
     }
+
+    
 
 
 }
