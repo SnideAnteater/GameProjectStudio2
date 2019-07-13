@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject player;
-    public float zoom;
+  //  public GameObject player;
     public float sensitivity;
    
 

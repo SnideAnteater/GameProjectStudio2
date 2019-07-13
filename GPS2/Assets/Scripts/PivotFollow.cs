@@ -13,7 +13,10 @@ public class PivotFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if(GameManager.Instance != null)
+        {
+            sensitivity = GameManager.Instance.sensitivity;
+        }
         // zoom = Camera.main.transform.position.z;
 
     }
