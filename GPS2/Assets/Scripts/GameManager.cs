@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
   //  public GameObject player;
     public float sensitivity;
-   
+
 
     public static GameManager Instance { get; private set; }
 
@@ -18,9 +19,11 @@ public class GameManager : MonoBehaviour
         else if (Instance != this) Destroy(this.gameObject);//if singleton exists, kill self
 
         DontDestroyOnLoad(this.gameObject);
+
+       
     }
 
-    
+
 
 
 }

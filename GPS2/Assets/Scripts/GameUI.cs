@@ -12,7 +12,8 @@ public class GameUI : MonoBehaviour
 
     void Start()
     {
-        music.volume = PlayerPrefs.GetFloat("MusicVolume");
+        if (music != null)//prevent null errors
+            music.volume = PlayerPrefs.GetFloat("MusicVolume");
         pauseUI.SetActive(false);
         settingUI.SetActive(false);
     }

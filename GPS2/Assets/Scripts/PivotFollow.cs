@@ -1,22 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PivotFollow : MonoBehaviour
 {
     public GameObject character;
     public float sensitivity = 15f;
     public float threshold = 0.5f;
-    public float maxSpeed = 15f;
+    public float maxSpeed = 150f;
     public float minSpeed = 2f;
+   // public Slider slider;
 
     // Start is called before the first frame update
     void Start()
     {
-        if(GameManager.Instance != null)
-        {
-            sensitivity = GameManager.Instance.sensitivity;
-        }
+       // if(GameManager.Instance != null)
+       // {
+           // sensitivity = GameManager.Instance.sensitivity;
+       // }
         // zoom = Camera.main.transform.position.z;
 
     }
@@ -24,7 +26,11 @@ public class PivotFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
+            sensitivity = PlayerPrefs.GetFloat("Sensitivity");
+
+        
         Vector3 charaPos = character.transform.position;
       
        

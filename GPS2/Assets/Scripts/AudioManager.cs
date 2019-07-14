@@ -17,7 +17,8 @@ public class AudioManager : MonoBehaviour
 
     void Update()
     {
-        music.volume = volume.value;
+        if(music!=null)//prevent null errors
+            music.volume = volume.value;
     }
 
     public void VolumePrefs()

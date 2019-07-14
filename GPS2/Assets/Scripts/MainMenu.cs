@@ -12,13 +12,15 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        if(music!=null)
         music.volume = PlayerPrefs.GetFloat("MusicVolume");
         settingUI.SetActive(false);
     }
 
     void Update()
     {
-        buttonSoundEffect.volume = PlayerPrefs.GetFloat("FxVolume");
+        if (buttonSoundEffect != null)
+            buttonSoundEffect.volume = PlayerPrefs.GetFloat("FxVolume");
     }
 
     public void StartGame()

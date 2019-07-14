@@ -25,8 +25,11 @@ public class MovingPlatformPhysics : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        print("contact nulled");
-        contact = false;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            print("contact nulled");
+            contact = false;
+        }
     }
 
     private void Update()

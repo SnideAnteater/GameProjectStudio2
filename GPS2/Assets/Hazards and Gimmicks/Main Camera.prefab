@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 0}
   speed: 0.3
-  threshold: 0.05
+  threshold: 0
 --- !u!114 &523232145837514280
 MonoBehaviour:
   m_ObjectHideFlags: 0

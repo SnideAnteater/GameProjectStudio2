@@ -6,7 +6,7 @@ public class CameraFollow : MonoBehaviour
 {
     public GameObject character;
     public float speed = 0.3f;
-    public float threshold = 0.05f;
+    public float threshold = 0f;
     
     // Start is called before the first frame update
     void Start()
