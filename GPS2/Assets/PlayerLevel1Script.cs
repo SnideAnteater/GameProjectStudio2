@@ -46,7 +46,7 @@ public class PlayerLevel1Script : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Exit")
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
