@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLevel1Script : MonoBehaviour
 {
+    public AudioSource deathSound;
+    public AudioSource cpSound;
+
     public Transform cP1;
     public Transform cP2;
     public Transform cP3;
@@ -27,6 +30,13 @@ public class PlayerLevel1Script : MonoBehaviour
         IsCP1Checked = false;
         IsCP2Checked = false;
         IsCP3Checked = false;
+
+    }
+
+    void Update()
+    {
+        deathSound.volume = PlayerPrefs.GetFloat("FxVolume");
+        cpSound.volume = PlayerPrefs.GetFloat("FxVolume");
 
     }
 
@@ -54,18 +64,21 @@ public class PlayerLevel1Script : MonoBehaviour
     {
         if (collider.gameObject.tag == "Checkpoint1")
         {
+            cpSound.Play();
             cP1Wall.SetActive(true);
             Debug.Log("CP1");
             IsCP1Checked = true;
         }
         else if (collider.gameObject.tag == "Checkpoint2")
         {
+            cpSound.Play();
             cP2Wall.SetActive(true);
             Debug.Log("CP2");
             IsCP2Checked = true;
         }
         else if (collider.gameObject.tag == "Checkpoint3")
         {
+            cpSound.Play();
             cP3Wall.SetActive(true);
             Debug.Log("CP3");
             IsCP3Checked = true;
@@ -75,6 +88,7 @@ public class PlayerLevel1Script : MonoBehaviour
     private void Dead()
     {
         Debug.Log("Dead");
+        deathSound.Play();
         //Destroy(this.gameObject);
         if (IsCP1Checked && !IsCP2Checked && !IsCP3Checked)
         {
