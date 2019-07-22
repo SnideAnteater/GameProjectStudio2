@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerLevel1Script : MonoBehaviour
 {
+    public GameObject rotateMap;
     public AudioSource deathSound;
     public AudioSource cpSound;
 
@@ -19,6 +21,10 @@ public class PlayerLevel1Script : MonoBehaviour
     private bool IsCP1Checked;
     private bool IsCP2Checked;
     private bool IsCP3Checked;
+
+    public float cP1Rotation;
+    public float cP2Rotation;
+    public float cP3Rotation;
 
 
     void Start()
@@ -46,10 +52,15 @@ public class PlayerLevel1Script : MonoBehaviour
         {
             Dead();
         }
+        if (other.gameObject.tag == "Failsafe")
+        {
+            FailsafeTp();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+       
         if (collision.gameObject.tag == "Hazard")
         {
             Dead();
@@ -57,6 +68,22 @@ public class PlayerLevel1Script : MonoBehaviour
         else if (collision.gameObject.tag == "Exit")
         {
             SceneManager.LoadScene("MainMenu");
+        }
+    }
+
+    private void FailsafeTp()
+    {
+        if(IsCP3Checked)
+        {
+            this.gameObject.transform.position = cP3.transform.position;
+        }
+        else if (IsCP2Checked)
+        {
+            this.gameObject.transform.position = cP2.transform.position;
+        }
+        else if (IsCP1Checked)
+        {
+            this.gameObject.transform.position = cP1.transform.position;
         }
     }
 
@@ -93,15 +120,26 @@ public class PlayerLevel1Script : MonoBehaviour
         if (IsCP1Checked && !IsCP2Checked && !IsCP3Checked)
         {
             this.gameObject.transform.position = cP1.transform.position;
+            ResetRotation(cP1Rotation);
         }
         else if (IsCP1Checked && IsCP2Checked && !IsCP3Checked)
         {
             this.gameObject.transform.position = cP2.transform.position;
+            ResetRotation(cP2Rotation);
         }
         else if (IsCP1Checked && IsCP2Checked && IsCP3Checked)
         {
             this.gameObject.transform.position = cP3.transform.position;
+            ResetRotation(cP3Rotation);
         }
+    }
+
+    private void ResetRotation(float rot)
+    {
+        // float offsetRot = rotateMap.transform.rotation.z - rot;
+        
+        rotateMap.transform.RotateAround(this.transform.position, new Vector3(0, 0, -1), rotateMap.transform.rotation.eulerAngles.z);
+        rotateMap.transform.RotateAround(this.transform.position, new Vector3(0, 0, 1), rot);
     }
 }
 

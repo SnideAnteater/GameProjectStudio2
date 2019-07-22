@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
   //  public GameObject player;
     public float sensitivity;
-
+    
 
     public static GameManager Instance { get; private set; }
 
