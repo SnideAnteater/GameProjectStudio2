@@ -71,6 +71,14 @@ public class PlayerLevel1Script : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Hazard")
+        {
+            Dead();
+        }
+    }
+
     private void FailsafeTp()
     {
         if(IsCP3Checked)
