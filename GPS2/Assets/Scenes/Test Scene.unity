@@ -425,7 +425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 192591547}
   tpLocation: {fileID: 1000939967}
-  timer: 5
+  timeToSpawn: 2
 --- !u!65 &148575243
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -828,7 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 192591547}
   tpLocation: {fileID: 148575240}
-  timer: 5
+  timeToSpawn: 2
 --- !u!65 &1000939970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1105,7 +1105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1881632334
 MonoBehaviour:
   m_ObjectHideFlags: 0

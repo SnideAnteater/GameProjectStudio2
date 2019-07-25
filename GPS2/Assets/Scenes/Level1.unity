@@ -2318,7 +2318,7 @@ PrefabInstance:
     - target: {fileID: 5062577691119573452, guid: 941c3c5dad3963940b96d7088e1c9f32,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0154671995
+      value: 0.012761528
       objectReference: {fileID: 0}
     - target: {fileID: 6599589542152364369, guid: 941c3c5dad3963940b96d7088e1c9f32,
         type: 3}
@@ -3622,55 +3622,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941c3c5dad3963940b96d7088e1c9f32, type: 3}
---- !u!1 &719756121
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 719756123}
-  - component: {fileID: 719756122}
-  m_Layer: 0
-  m_Name: Light Probe Group
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!220 &719756122
-LightProbeGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719756121}
-  m_Enabled: 1
-  m_SourcePositions:
-  - {x: 1.1572995, y: 1.4271202, z: -0.08586894}
-  - {x: 1.1501431, y: 1.3828862, z: -0.69848794}
-  - {x: 1.1403947, y: -0.7260623, z: -0.19413067}
-  - {x: 1.1459379, y: -0.7378845, z: -0.8403573}
-  - {x: 0.016361237, y: 1.4260473, z: -0.018949479}
-  - {x: 0.016479969, y: 1.4303703, z: -0.68738794}
-  - {x: 0.105676174, y: -0.7935276, z: -0.11581497}
-  - {x: 0.11593437, y: -0.7544174, z: -0.7895529}
-  m_Dering: 1
---- !u!4 &719756123
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719756121}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.663914, y: -4.6268845, z: 0.089}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &724423921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6497,7 +6448,7 @@ PrefabInstance:
     - target: {fileID: 5062577691119573452, guid: 941c3c5dad3963940b96d7088e1c9f32,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.015722623
+      value: 0.012946323
       objectReference: {fileID: 0}
     - target: {fileID: 6599589542152364369, guid: 941c3c5dad3963940b96d7088e1c9f32,
         type: 3}
@@ -10082,7 +10033,7 @@ PrefabInstance:
     - target: {fileID: 5062577691119573452, guid: 941c3c5dad3963940b96d7088e1c9f32,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.015722623
+      value: 0.012946323
       objectReference: {fileID: 0}
     - target: {fileID: 6599589542152364369, guid: 941c3c5dad3963940b96d7088e1c9f32,
         type: 3}
@@ -10600,7 +10551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2050111625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10608,7 +10559,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050111624}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -12162,7 +12113,7 @@ PrefabInstance:
     - target: {fileID: 5062577691119573452, guid: 941c3c5dad3963940b96d7088e1c9f32,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0154671995
+      value: 0.012761528
       objectReference: {fileID: 0}
     - target: {fileID: 6599589542152364369, guid: 941c3c5dad3963940b96d7088e1c9f32,
         type: 3}
@@ -16249,7 +16200,7 @@ Transform:
   m_GameObject: {fileID: 7834183472503760860}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000020861623}
   m_LocalPosition: {x: 6.352, y: -5.251, z: -0.2946}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 807685093}
   m_Father: {fileID: 0}
