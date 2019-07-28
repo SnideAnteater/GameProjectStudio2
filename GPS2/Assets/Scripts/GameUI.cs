@@ -51,5 +51,6 @@ public class GameUI : MonoBehaviour
     public void backToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
     }
 }
