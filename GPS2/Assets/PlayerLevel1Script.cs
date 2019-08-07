@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLevel1Script : MonoBehaviour
 {
+    public GameObject winUI;
     public GameObject rotateMap;
     public AudioSource deathSound;
     public AudioSource cpSound;
 
+    public Transform startPos;
     public Transform cP1;
     public Transform cP2;
     public Transform cP3;
@@ -22,9 +24,12 @@ public class PlayerLevel1Script : MonoBehaviour
     private bool IsCP2Checked;
     private bool IsCP3Checked;
 
+    public float startRotation;
     public float cP1Rotation;
     public float cP2Rotation;
     public float cP3Rotation;
+
+   
 
 
     void Start()
@@ -36,6 +41,8 @@ public class PlayerLevel1Script : MonoBehaviour
         IsCP1Checked = false;
         IsCP2Checked = false;
         IsCP3Checked = false;
+
+        
 
     }
 
@@ -67,7 +74,9 @@ public class PlayerLevel1Script : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Exit")
         {
-            SceneManager.LoadScene("MainMenu");
+            //SceneManager.LoadScene("MainMenu");
+            winUI.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
@@ -125,7 +134,12 @@ public class PlayerLevel1Script : MonoBehaviour
         Debug.Log("Dead");
         deathSound.Play();
         //Destroy(this.gameObject);
-        if (IsCP1Checked && !IsCP2Checked && !IsCP3Checked)
+        if(!IsCP1Checked && !IsCP2Checked && !IsCP3Checked)
+        {
+            this.gameObject.transform.position = startPos.position;
+            ResetRotation(startRotation);
+        }
+        else if (IsCP1Checked && !IsCP2Checked && !IsCP3Checked)
         {
             this.gameObject.transform.position = cP1.transform.position;
             ResetRotation(cP1Rotation);

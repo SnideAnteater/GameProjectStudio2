@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    
+    public bool openOnPickup = false;
     bool hasKey = false;
     public GameObject destination;
     public float speed = 5;
@@ -14,7 +14,10 @@ public class Door : MonoBehaviour
     void Unlock()
     {
         hasKey = true;
-        
+        if (openOnPickup)
+        {
+            open = true;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -22,7 +25,7 @@ public class Door : MonoBehaviour
         if(hasKey)
         {
             //Destroy(this.gameObject);
-            open = true;
+            open = true;       
         }
     }
     private void Update()
