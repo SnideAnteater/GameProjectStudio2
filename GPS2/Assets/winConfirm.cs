@@ -11,6 +11,12 @@ public class winConfirm : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void levelSelect()
+    {
+        SceneManager.LoadScene("LevelSelection");
+        Time.timeScale = 1f;
+    }
+
     public void replay()
     {
         SceneManager.LoadScene("Level3");
