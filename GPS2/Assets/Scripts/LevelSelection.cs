@@ -34,6 +34,6 @@ public class LevelSelection : MonoBehaviour
 
     public void Level3()
     {
-
+        SceneManager.LoadScene("Level3");
     }
 }
